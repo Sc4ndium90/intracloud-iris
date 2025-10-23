@@ -6,6 +6,7 @@ DOWNLOAD_PATH="/tmp/$ARCHIVE_NAME"
 DOMAIN="kimai.intracloud.local"
 VH_FOLDER="/etc/apache2/sites-available/"
 VH_CONFIG_NAME="kimai.conf"
+APACHE_LOG_DIR="/var/log/apache2"
 
 #OK
 echo "[+] Downloading Kimai tarball.."
