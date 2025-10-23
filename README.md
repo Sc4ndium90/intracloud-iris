@@ -12,3 +12,10 @@ Folder /tools: All scripts to install each apps
 - Kanboard
 - Kimai - Check README_KIMAI.md for post-install commands
 - OsTicket
+
+
+## Backup script
+To run the backup script automatically, add the following line in /etc/crontab:
+```bash
+0 3 * * * root bash /root/backup.sh
+```
