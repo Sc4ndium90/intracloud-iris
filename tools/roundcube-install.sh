@@ -1,4 +1,3 @@
-```bash
 #!/bin/bash
 VERSION="1.6.11"
 INSTALL_PATH="/var/www/roundcube/public_html"
