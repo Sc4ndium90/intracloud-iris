@@ -6,6 +6,7 @@ DOWNLOAD_PATH="/tmp/$ARCHIVE_NAME"
 DOMAIN="freshrss.intracloud.local"
 VH_FOLDER="/etc/apache2/sites-available/"
 VH_CONFIG_NAME="freshrss.conf"
+APACHE_LOG_DIR="/var/log/apache2"
 
 echo "[+] Downloading FreshRSS tarball.."
 wget -P /tmp "https://github.com/FreshRSS/FreshRSS/archive/refs/tags/$VERSION.tar.gz"
