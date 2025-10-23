@@ -17,8 +17,8 @@ if [ -d "$INSTALL_PATH" ]; then
 	rm $DOWNLOAD_PATH
 else
 	echo "[+] Extracting files to $INSTALL_PATH"
-	mkdir -p "$INSTALL_PATH/public_html"
-	tar zxf "${DOWNLOAD_PATH}" -C "${INSTALL_PATH}/public_html" --strip-components=1
+	mkdir -p "$INSTALL_PATH"
+	tar zxf "${DOWNLOAD_PATH}" -C "${INSTALL_PATH}" --strip-components=1
 	chown -R www-data:www-data "${INSTALL_PATH}"
 	chmod -R 755 "${INSTALL_PATH}"
 	rm $DOWNLOAD_PATH
