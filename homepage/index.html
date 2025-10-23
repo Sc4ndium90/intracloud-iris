@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IntraCloud - Accueil Intranet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Variables CSS pour les couleurs */
+        :root {
+            --color-primary: #007bff; /* Bleu moderne */
+            --color-secondary: #6c757d; /* Gris secondaire */
+            --color-light: #f8f9fa; /* Gris très clair/Blanc cassé */
+            --color-dark: #343a40; /* Gris foncé pour le texte */
+            --color-white: #ffffff;
+        }
+
+        /* Réinitialisation de base */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--color-light);
+            color: var(--color-dark);
+            line-height: 1.6;
+        }
+
+        /* En-tête (Barre de navigation) */
+        .header {
+            background-color: var(--color-dark);
+            color: var(--color-white);
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        /* Conteneur principal */
+        .container {
+            max-width: 1200px; /* Taille pour un écran 16:9 classique */
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Grille des applications */
+        .app-grid {
+            display: grid;
+            /* 3 colonnes pour les grands écrans */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            justify-content: center;
+        }
+
+        /* Bloc cliquable (Carte) */
+        .app-card {
+            background-color: var(--color-white);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none; /* Supprime le soulignement par défaut */
+            color: var(--color-dark);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 150px; /* Hauteur fixe pour l'uniformité */
+            border: 1px solid var(--color-light);
+        }
+
+        /* Effet de survol (Hover) */
+        .app-card:hover {
+            transform: translateY(-5px); /* Légère élévation */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Ombre plus prononcée */
+            background-color: var(--color-light); /* Changement subtil de fond */
+        }
+
+        /* Icônes/Émojis */
+        .app-icon {
+            font-size: 3rem; /* Grande taille d'icône */
+            margin-bottom: 15px;
+            color: var(--color-primary); /* Couleur principale pour l'icône */
+        }
+
+        /* Titre de l'application */
+        .app-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        /* Media Queries pour le responsive */
+        @media (max-width: 992px) {
+            .app-grid {
+                /* 2 colonnes sur les tablettes */
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+
+        @media (max-width: 576px) {
+            .app-grid {
+                /* 1 colonne sur les mobiles */
+                grid-template-columns: 1fr;
+            }
+            .container {
+                margin: 20px auto;
+                padding: 0 10px;
+            }
+            .app-card {
+                height: 120px;
+            }
+            .header h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>IntraCloud</h1>
+    </header>
+
+    <div class="container">
+        <section class="app-grid">
+            
+            <a href="http://dokuwiki.intracloud.local" class="app-card">
+                <i class="app-icon fas fa-book"></i>
+                <p class="app-title">Dokuwiki</p>
+            </a>
+
+            <a href="http://piwigo.intracloud.local" class="app-card">
+                <i class="app-icon fas fa-images"></i>
+                <p class="app-title">Piwigo</p>
+            </a>
+
+            <a href="http://freshrss.intracloud.local" class="app-card">
+                <i class="app-icon fas fa-rss"></i>
+                <p class="app-title">FreshRSS</p>
+            </a>
+
+            <a href="http://forum.intracloud.local" class="app-card">
+                <i class="app-icon fas fa-comments"></i>
+                <p class="app-title">MyBB (Forum)</p>
+            </a>
+
+            <a href="http://support.intracloud.local" class="app-card">
+                <i class="app-icon fas fa-headset"></i>
+                <p class="app-title">OsTicket (Support)</p>
+            </a>
+
+            <a href="http://files.intracloud.local" class="app-card">
+                <i class="app-icon fas fa-cloud"></i>
+                <p class="app-title">Nextcloud (Fichiers)</p>
+            </a>
+
+            <a href="http://roundcube.intracloud.local" class="app-card">
+                <i class="app-icon fas fa-envelope"></i>
+                <p class="app-title">Roundcube (Mail)</p>
+            </a>
+
+            <a href="http://limesurvey.intracloud.local" class="app-card">
+                <i class="app-icon fas fa-poll-h"></i>
+                <p class="app-title">LimeSurvey</p>
+            </a>
+
+            <a href="http://kanboard.intracloud.local" class="app-card">
+                <i class="app-icon fas fa-clipboard-list"></i>
+                <p class="app-title">Kanboard</p>
+            </a>
+
+            <a href="http://kimai.intracloud.local" class="app-card">
+                <i class="app-icon fas fa-clock"></i>
+                <p class="app-title">Kimai (Time Tracking)</p>
+            </a>
+
+        </section>
+    </div>
+
+</body>
+</html>
