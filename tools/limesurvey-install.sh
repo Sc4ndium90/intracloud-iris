@@ -5,6 +5,7 @@ DOWNLOAD_PATH="/tmp/$ARCHIVE_NAME"
 DOMAIN="survey.intracloud.local"
 VH_FOLDER="/etc/apache2/sites-available/"
 VH_CONFIG_NAME="limesurvey.conf"
+APACHE_LOG_DIR="/var/log/apache2"
 
 echo "[+] Downloading LimeSurvey zip.."
 wget -P /tmp "https://download.limesurvey.org/latest-master/limesurvey6.15.20+251021.zip"
