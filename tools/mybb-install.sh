@@ -6,6 +6,7 @@ DOWNLOAD_PATH="/tmp/$ARCHIVE_NAME"
 DOMAIN="forum.intracloud.local"
 VH_FOLDER="/etc/apache2/sites-available/"
 VH_CONFIG_NAME="mybb.conf"
+APACHE_LOG_DIR="/var/log/apache2"
 
 echo "[+] Downloading MyBB zip.."
 wget -P /tmp "https://github.com/mybb/mybb/releases/download/mybb_${VERSION}/mybb_${VERSION}.zip"
