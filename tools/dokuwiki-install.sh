@@ -6,6 +6,7 @@ DOWNLOAD_PATH="/tmp/$ARCHIVE_NAME"
 DOMAIN="dokuwiki.intracloud.local"
 VH_FOLDER="/etc/apache2/sites-available/"
 VH_CONFIG_NAME="dokuwiki.conf"
+APACHE_LOG_DIR="/var/log/apache2"
 
 echo "[+] Downloading DokuWiki tarball.."
 wget -P /tmp "https://github.com/dokuwiki/dokuwiki/releases/download/release-$VERSION/dokuwiki-$VERSION.tgz"
