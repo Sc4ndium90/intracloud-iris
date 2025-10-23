@@ -6,6 +6,7 @@ DOWNLOAD_PATH="/tmp/$ARCHIVE_NAME"
 DOMAIN="kanban.intracloud.local"
 VH_FOLDER="/etc/apache2/sites-available/"
 VH_CONFIG_NAME="kanboard.conf"
+APACHE_LOG_DIR="/var/log/apache2"
 
 echo "[+] Downloading KanBoard tarball.."
 wget -P /tmp "https://github.com/kanboard/kanboard/archive/refs/tags/$VERSION.tar.gz"
