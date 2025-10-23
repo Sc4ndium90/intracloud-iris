@@ -6,6 +6,7 @@ DOWNLOAD_PATH="/tmp/$ARCHIVE_NAME"
 DOMAIN="files.intracloud.local"
 VH_FOLDER="/etc/apache2/sites-available/"
 VH_CONFIG_NAME="nextcloud.conf"
+APACHE_LOG_DIR="/var/log/apache2"
 
 echo "[+] Downloading Nextcloud tarball.."
 wget -P /tmp "https://github.com/nextcloud-releases/server/releases/download/v$VERSION/nextcloud-$VERSION.tar.bz2"
