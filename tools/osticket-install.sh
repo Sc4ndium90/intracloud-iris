@@ -6,6 +6,7 @@ DOWNLOAD_PATH="/tmp/$ARCHIVE_NAME"
 DOMAIN="support.intracloud.local"
 VH_FOLDER="/etc/apache2/sites-available/"
 VH_CONFIG_NAME="osticket.conf"
+APACHE_LOG_DIR="/var/log/apache2"
 
 echo "[+] Downloading OsTicket zip.."
 wget -P /tmp "https://github.com/osTicket/osTicket/releases/download/${VERSION}/osTicket-${VERSION}.zip"
