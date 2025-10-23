@@ -7,6 +7,7 @@ DOWNLOAD_PATH="/tmp/$ARCHIVE_NAME"
 DOMAIN="roundcube.intracloud.local"
 VH_FOLDER="/etc/apache2/sites-available/"
 VH_CONFIG_NAME="roundcube.conf"
+APACHE_LOG_DIR="/var/log/apache2"
 
 echo "[+] Downloading RoundCube tarball.."
 wget -P /tmp "https://github.com/roundcube/roundcubemail/releases/download/$VERSION/roundcubemail-$VERSION-complete.tar.gz"
