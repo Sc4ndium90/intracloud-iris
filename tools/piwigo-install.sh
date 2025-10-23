@@ -6,6 +6,7 @@ DOWNLOAD_PATH="/tmp/$ARCHIVE_NAME"
 DOMAIN="piwigo.intracloud.local"
 VH_FOLDER="/etc/apache2/sites-available/"
 VH_CONFIG_NAME="piwigo.conf"
+APACHE_LOG_DIR="/var/log/apache2"
 
 echo "[+] Downloading Piwigo tarball.."
 wget --content-disposition -P /tmp "https://piwigo.org/download/dlcounter.php?code=$VERSION"
